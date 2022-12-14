@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+    <script>
+      myAudio = new Audio('sound/good_enough.mp3'); 
+	if (typeof myAudio.loop == 'boolean')
+	{
+		myAudio.loop = true;
+	}
+	else
+	{
+		myAudio.addEventListener('ended', function() {
+			this.currentTime = 0;
+			this.play();
+		}, false);
+	}
+	myAudio.volume = 0.3;
+	myAudio.play();
+    </script>
+    <div class="topmost">
+        <h2>ENJOY THIS GAME WITH REFRESH THE PAGE</h2>
+    </div>
+    <div class="container">
+      <h1 class="heading">Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="images/dice6.png">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="images/dice6.png">
+      </div>
+
+    </div>
+   
+    <div class="btn">
+      <button  type="button">
+        PLAY
+     </button>     
+    </div>
+   
+  <script src="index.js"></script>
+  </body>
+
+  <footer>
+    ❤️ made by dhanraj
+  </footer>
+</html>
